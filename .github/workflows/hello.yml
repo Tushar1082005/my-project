@@ -7,17 +7,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print message
-        run: |
-          echo "Hello, Github Actions!"
-          echo "Tushar"
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: list file
+        run: ls
 
   say-bye:
     needs: say-hello
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print message
-        run: |
-          echo "Hello, Github Actions!"
-          echo "Tushar"
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: list file
+        run: ls
