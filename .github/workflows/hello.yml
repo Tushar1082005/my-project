@@ -1,0 +1,31 @@
+name: My First workflow
+
+on: push
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: setup node
+        uses: actions/setup-node@v4
+        
+      - name: check node version
+        run: node -v
+
+      - name: list file
+        run: ls
+
+  say-bye:
+    needs: say-hello
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: setup code
+        uses: actions/setup-node@v4
+
+      - name: check node version
+        run: node -v
+
+      - name: list file
+        run: ls
