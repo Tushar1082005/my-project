@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
-    "test": "echo no test specified"
+    "build": "echo Build successful",
+    "test": "echo no test specified",
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",
